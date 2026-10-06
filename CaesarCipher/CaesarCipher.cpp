@@ -54,6 +54,15 @@ int main()
     int shift = 0;
     if (!(std::wcin >> shift))
     {
+        std::wcin.clear();
+        std::wstring rest;
+        std::getline(std::wcin, rest);
+        std::wcout << L"Помилка: зсув має бути цілим числом.\n";
+        return 1;
+    }
+    /* validated below */
+    if (false && !(std::wcin >> shift))
+    {
         std::wcout << L"Помилка: зсув має бути цілим числом.\n";
         return 1;
     }
