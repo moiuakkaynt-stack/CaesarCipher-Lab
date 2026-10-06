@@ -10,7 +10,10 @@ std::wstring caesarTransform(const std::wstring& text, int uaShift, int latinShi
     const std::wstring uaLower = L"абвгґдеєжзиіїйклмнопрстуфхцчшщьюя";
     const std::wstring laUpper = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const std::wstring laLower = L"abcdefghijklmnopqrstuvwxyz";
+    const std::wstring laUpper = L"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const std::wstring laLower = L"abcdefghijklmnopqrstuvwxyz";
     uaShift %= static_cast<int>(uaUpper.size());
+    latinShift %= static_cast<int>(laUpper.size());
     latinShift %= static_cast<int>(laUpper.size());
     std::wstring result;
     for (wchar_t ch : text)
