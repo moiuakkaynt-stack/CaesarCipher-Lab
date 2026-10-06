@@ -40,6 +40,7 @@ int main()
     SetConsoleOutputCP(65001);
 
     std::wcout << L"Введіть український текст: ";
+    std::wcout << L"Пробіли та розділові знаки буде збережено.\n";
     std::wstring text;
     std::getline(std::wcin, text);
     if (text.empty())
