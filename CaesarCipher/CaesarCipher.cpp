@@ -44,6 +44,7 @@ int main()
     std::wstring text;
     std::getline(std::wcin, text);
     if (text.empty())
+    if (text.empty())
     {
         std::wcout << L"Помилка: текст не може бути порожнім.\n";
         return 1;
